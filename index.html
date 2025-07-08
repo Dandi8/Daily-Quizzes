@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="Puzzle.jpg" alt="صورة اللغز" id="puzzle-img">
+    <img src="blue.jpg" alt="صورة اللغز" id="puzzle-img">
     <p>حل هذا اللغز وأدخل الرقم الصحيح:</p>
     <input type="number" id="answer" placeholder="اكتب الرقم هنا">
     <button onclick="checkAnswer()">تحقق</button>
@@ -24,7 +24,7 @@
       const resultDiv = document.getElementById("result");
 
       // الرقم الصحيح
-      const correctAnswer = 36;
+      const correctAnswer = 251;
 
       if (parseInt(userAnswer) === correctAnswer) {
         resultDiv.innerHTML = "✅ صحيح! أحسنت.";
