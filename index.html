@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حل اللغز</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  
+</head>
+<body>
+  <div class="container">
+    <img src="puzzle.jpg" alt="صورة اللغز" id="puzzle-img">
+    <p>حل هذا اللغز وأدخل الرقم الصحيح:</p>
+    <input type="number" id="answer" placeholder="اكتب الرقم هنا">
+    <button onclick="checkAnswer()">تحقق</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const userAnswer = document.getElementById("answer").value;
+      const resultDiv = document.getElementById("result");
+
+      // الرقم الصحيح
+      const correctAnswer = 36;
+
+      if (parseInt(userAnswer) === correctAnswer) {
+        resultDiv.innerHTML = "✅ صحيح! أحسنت.";
+        resultDiv.style.color = "green";
+      } else {
+        resultDiv.innerHTML = "❌ غير صحيح. حاول مرة أخرى.";
+        resultDiv.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
